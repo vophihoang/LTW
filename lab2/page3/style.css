@@ -171,7 +171,6 @@ a {
     display: flex;
 }
 #foot_st .foot_right .likes_st {
-    /* float: left; */
     margin-right: 15px;
 }
 .foot_right .soc_icons {
