@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #333;
+    font-family: Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    --width-page:1000px;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none !important;
+    font-weight: 600;
+}
+.w-250 {
+    width: 250px;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.light_gray {
+    color:lightgray;
+}
+.header-bg-1 {
+    background-color: lightgray;
+    min-height: 50px;
+}
+.header-bg-1 .header-nav-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--width-page) !important;
+    padding: 20px 0 30px 0;
+}
+
+.header-bg-1 .header-nav-1 .btn-buy-ticket a{
+    color: #fff;
+    padding: 10px 18px;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn--orange {
+    background-color: orange;
+}
+.btn--blue {
+    background-color: #1bbadaf2;
+}
+.header-bg-2 {
+    background-color: #fff;
+    min-height: 50px;
+    color:#000;
+}
+.header-bg-2 .navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--width-page);
+    padding: 30px 0;
+}
+.header-bg-2 .navbar-left,
+.right_socials .bottom-icons{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.header-bg-2 .navbar-left li,
+.right_socials li{
+    display: inline;
+    margin-right: 20px;
+}
+.header-bg-2 .navbar-left  li:last-child,
+.right_socials li:last-child{
+    margin-right: 0;
+}
+.header-bg-2 .navbar-left a,
+.right_socials a {
+    color:gray;
+}
+#section_slider {
+    background-color: lightgray;
+    height: 600px;
+    position: relative;
+}
+#section_slider .carousel-slider {
+    width: var(--width-page);
+    margin: 0 auto;
+    position: relative;
+    top:50px;
+}
+#section_gym .gym_life {
+    margin: 70px auto 30px;
+    width: var(--width-page);
+    display: flex;
+    justify-content: space-around;
+}
+#section_gym .gym_life .gym_life_item {
+    width: calc(33.33% - 50px);
+}
+#section_gym .gym_life .img_gym_st img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#section_gym .text_gym_style .gym_st {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px 0;
+}
+#section_gym .text_gym_style .gym_text {
+    margin-bottom: 20px;
+    color:gray;
+}
+#section_gym .gym_life_item .btn-join-now {
+    background-color: orange;
+    color:white;
+    padding: 10px 25px;
+    border-radius: 5px;display: inline-block;
+}
+#section_intro {
+    background-color: lightgray;
+    height: 410px;
+}
+#section_intro .intro {
+    margin: 0 auto;
+    width: var(--width-page);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+#section_intro .intro .intro_item {
+    background-color: #fff;
+    width: calc(33.33% - 20px);
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+#section_intro .intro_item .price{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+#section_intro .intro_item .price--orange {
+    color:orange
+}
+#section_intro .intro_item .price--blue {
+    color:#1bbadaf2;
+}
+#section_intro .intro_item .flat_pricing_list {
+    margin-top: 30px;
+}
+#section_intro .intro_item .flat_pricing_list li {
+    margin-bottom: 20px;
+}
+#section_intro .intro_item .btn-buy-ticket {
+    color: #fff;
+    padding: 10px 18px;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#section_party {
+    background-color: #151515;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+#section_party .subscribe {
+    background-color: #000;
+    margin: 0 auto;
+    width: 450px;
+    padding: 30px 15px 20px;
+}
+#section_party .subscribe .headtext_style {
+    font-weight: normal;
+    color: white;
+    position: relative;
+}
+#section_party .subscribe .headtext_style::after {
+    background-color: #045ad2;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 11px auto 20px;
+    position: relative;
+    width: 75px;
+}
+#section_party .subscribe .subtext_style {
+    padding: 10px 45px 20px;
+}
+#section_party .subscribe .subscribe_btn {
+    background-color: #045ad2;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    color: white;
+}
+.font-13 {
+    font-size: 13px;
+}
+#section_party_4 {
+    background-color: #000;
+    height: 50px;
+}
+#section_party_4 .foot_st {
+    width: var(--width-page);
+    margin: 0 auto;
+    padding-top: 12px;
+}
+#section_party_4 .foot_st .copy-right {
+    float: left;;
+}
+#section_party_4 .foot_st .copy-right .pixfort_st {
+    color: #0c4ca6;
+    font-weight: bold;
+}
+.foot_st .copy-right .rights_st,
+.foot_st .socbuttons .likes_st {
+    margin-bottom: 0;
+}
+.foot_st .socbuttons {
+    width: 310px;
+}
+.foot_st .socbuttons .likes_st{
+    float: left;
+    margin-right: 15px;
+}
+.foot_st .socbuttons {
+    float: right;
+}
