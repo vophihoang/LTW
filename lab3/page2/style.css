@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #333;
+    font-family: Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+.container {
+    width: 700px;
+    min-height: 600px;
+    border: 10px solid #e6e6e6;
+}
+#contact .title {
+    font-weight: 800 ;
+    margin: 40px 0;
+}
+#contact .form-floating > div{
+    margin-bottom: 20px;
+}
+.form-floating input[type="text"],
+.form-floating input[type="email"],
+.form-floating input[type="password"],
+.form-floating select {
+    background-color: #f7f7f7;
+}
+.form-floating input[type="text"],
+.form-floating input[type="email"],
+.form-floating input[type="password"],
+.form-floating select,
+.form-floating textarea {
+  border-radius: 10px;
+}
+
+#contact .form-floating label {
+    font-weight: bold;
+}
+#contact .form-floating .btn-submit {
+    border-radius: 15px;
+    background-color: #333;
+    color: #fff;
+}
