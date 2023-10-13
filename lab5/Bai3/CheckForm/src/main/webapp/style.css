@@ -92,3 +92,9 @@ a {
     color: #7c6487;
     margin-top: 70px;
 }
+label.error {
+    font-weight: 700;
+    display: block;
+    color: red;
+    font-size: 14px;
+}

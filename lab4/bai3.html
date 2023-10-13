@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+
+        #greeting {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="greeting"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const greetings = [
+                "Chào bạn!",
+                "Xin chào!",
+                "Hello!",
+                "How are you!",
+                "Hola!",
+                "Hi!",
+            ];
+            const random = Math.random();
+            const index= Math.floor(random * greetings.length);
+            console.log(random, index);
+            const randomGreeting = greetings[index];
+            const greetingElement = document.getElementById("greeting");
+            greetingElement.textContent = randomGreeting;
+        });
+    </script>
+</body>
+
+</html>

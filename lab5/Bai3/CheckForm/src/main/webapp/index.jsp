@@ -1,3 +1,4 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="login">
         <div class="container">
             <div class="signin">
                 <h1 class="title">Sign In</h1>
-                <form >
+                <form method="post" action="<c:url value='/check'/>">
                     <div class="form-group">
-                        <input type="text" placeholder="username or email" class="input-sigin">
+                        <input type="text" name="username" placeholder="username or email" class="input-sigin">
+                        <label class="error"><c:if test="${errorUsername != null}">${errorUsername}</c:if></label>
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="password" class="input-sigin">
+                        <input type="password" name="password" placeholder="password" class="input-sigin">
+                        <label class="error"><c:if test="${errorPass != null}">${errorPass}</c:if></label>
                     </div>
                     <div>
                         <input type="submit" class="btn-signin" value="SIGN IN">

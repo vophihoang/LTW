@@ -6,21 +6,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="validate.js"></script>
 </head>
 <body>
     <div id="login">
         <div class="container">
             <div class="signin">
                 <h1 class="title">Sign In</h1>
-                <form >
+                <form id="formValidation">
                     <div class="form-group">
-                        <input type="text" placeholder="username or email" class="input-sigin">
+                        <input type="text" name="username" placeholder="username or email" class="input-sigin"/>
+                       
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="password" class="input-sigin">
+                        <input type="password" name="password" placeholder="password" class="input-sigin"/>
                     </div>
                     <div>
-                        <input type="submit" class="btn-signin" value="SIGN IN">
+                        <button type="submit" class="btn-signin">SIGN IN</button>
+                        <!-- <input type="submit" class="btn-signin" value="SIGN IN"/> -->
                     </div>
                 </form>
                 <div class="or-login">
@@ -34,5 +40,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>

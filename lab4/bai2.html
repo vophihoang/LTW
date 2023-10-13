@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div class="input">
+            <span>a:</span>
+            <input type="text" id="aInput">
+        </div>
+        <div class="input">
+            <span>b:</span>
+            <input type="text" id="bInput">
+        </div>
+        <div class="input">
+            <span>c:</span>
+            <input type="text" id="cInput">
+        </div>
+        <button type="button" onclick="solveQuadratic()">Run</button>
+        <div class="result"></div>
+    </div>
+    <script>
+        function solveQuadratic() {
+            let a = parseFloat(document.getElementById('aInput').value);
+            let b = parseFloat(document.getElementById('bInput').value);
+            let c = parseFloat(document.getElementById('cInput').value);
+            // console.log(a, b, c);
+            let delta = b * b - 4 * a * c;
+            let x1 = null;
+            let x2 = null;
+            let x3 = null;
+            if (delta > 0) {
+                x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            } else if (delta === 0) {
+                x3 = -b / (2 * a);
+            }
+
+            let resultDiv = document.querySelector('.result');
+
+            if (x1 != null && x2 != null) {
+                resultDiv.innerHTML = "Phương trình có hai nghiệm phân biệt: x1 = " + x1 + " và x2 = " + x2;
+            } else if (x3 != null) {
+                resultDiv.innerHTML = "Phương trình có một nghiệm kép: x = " + x3;
+            } else
+                resultDiv.innerHTML = "Phương trình không có nghiệm.";
+        }
+    </script>
+</body>
+
+</html>

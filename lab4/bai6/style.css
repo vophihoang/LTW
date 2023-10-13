@@ -35,7 +35,7 @@ a {
     margin-bottom: 35px;
     color: #4e225a;
 }
-#login .signin form input {
+#login .signin form .form-group input {
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
@@ -91,4 +91,10 @@ a {
 #login .signin .sign-up {
     color: #7c6487;
     margin-top: 70px;
+}
+label.error {
+    font-weight: 700;
+    display: block;
+    color: red;
+    font-size: 14px;
 }

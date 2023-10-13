@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>a</p>
+        <textarea id="textarea" cols="30" rows="10"></textarea>
+    </div>
+
+    <div>
+        <p>b</p>
+        <input type="text" id="textfield">
+    </div>
+    <br>
+    <button type="button" onclick="findText()">Run</button>
+    <div class="result"></div>
+
+    <script>
+        function findText() {
+            const textarea = document.getElementById("textarea").value;
+            const textfield = document.getElementById("textfield").value;
+            console.log(textarea, textfield);
+            if (!textarea || !textfield) {
+                alert("Vui lòng nhập cả đoạn văn (A) và dòng (B) trước khi tính toán.");
+                return;
+            }
+
+            let count = 0;
+            let index = textarea.indexOf(textfield);
+
+            while (index !== -1) {
+                count++;
+                index = textarea.indexOf(textfield, index + 1);
+            }
+            // Hiển thị kết quả lên trang web
+            const resultElement = document.querySelector('.result');
+            resultElement.textContent = `Số lần xuất hiện của "${textfield}" trong "${textarea}": ${count} lần`;
+
+        }
+    </script>
+</body>
+
+</html>
