@@ -15,9 +15,7 @@ a {
     text-decoration: none !important;
     font-weight: 600;
 }
-p.error {
-    color: red;
-}
+
 .container {
     width: 700px;
     min-height: 600px;
@@ -51,4 +49,7 @@ p.error {
     border-radius: 15px;
     background-color: #333;
     color: #fff;
+}
+p.error {
+    color: red;
 }
