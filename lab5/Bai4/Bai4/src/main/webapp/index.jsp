@@ -15,6 +15,7 @@
 </head>
 
 <body>
+
     <div id="contact">
         <div class="container">
             <h2 class="title text-center">Contact Us</h2>
@@ -22,21 +23,21 @@
             <form class="form-floating" action="<c:url value="/check"/> " method="post">
                 <div class="form-floating">
                     <input type="text" class="form-control" name="name"
-                        placeholder="name@example.com" value="Enter Your Name" >
+                        placeholder="name@example.com" value="" >
                     <label >FULL NAME*</label>
                     <p style="color: red"><c:if test="${nameError != null}">${nameError} </c:if> </p>
                 </div>
                 <div class="row g-2">
                     <div class="col-md">
                         <div class="form-floating">
-                            <input type="text" name="email" class="form-control" placeholder="name@example.com" value="Enter Your Email">
+                            <input type="text" name="email" class="form-control" placeholder="name@example.com" value="">
                             <label >EMAIL*</label>
                             <p style="color: red"><c:if test="${emailError != null}">${emailError} </c:if> </p>
                         </div>
                     </div>
                     <div class="col-md">
                         <div class="form-floating">
-                            <input type="text" name="phoneNumber" class="form-control" placeholder="name@example.com" value="Enter Number Phone">
+                            <input type="text" name="phoneNumber" class="form-control" placeholder="name@example.com" value="">
                             <label >PHONE</label>
                             <p style="color: red"><c:if test="${phoneNumberError != null}">${phoneNumberError} </c:if> </p>
                         </div>

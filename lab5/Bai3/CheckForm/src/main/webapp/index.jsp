@@ -1,3 +1,4 @@
+<%@ page import="org.example.User" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -5,37 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div id="login">
-        <div class="container">
-            <div class="signin">
-                <h1 class="title">Sign In</h1>
-                <form method="post" action="<c:url value='/check'/>">
-                    <div class="form-group">
-                        <input type="text" name="username" placeholder="username or email" class="input-sigin">
-                        <label class="error"><c:if test="${errorUsername != null}">${errorUsername}</c:if></label>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="password" placeholder="password" class="input-sigin">
-                        <label class="error"><c:if test="${errorPass != null}">${errorPass}</c:if></label>
-                    </div>
-                    <div>
-                        <input type="submit" class="btn-signin" value="SIGN IN">
-                    </div>
-                </form>
-                <div class="or-login">
-                    <p>Or login with</p>
-                    <ul class="social-media">
-                        <li ><a href="" class="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li ><a href="" class="google"><i class="fa-brands fa-google"></i></a></li>
-                      </ul>
-                </div>
-                <p class="sign-up">Sign up</p>
-            </div>
-        </div>
-    </div>
+<%--    <%--%>
+<%--        Object user = request.getSession().getAttribute("auth");--%>
+<%--        if (user == null) {--%>
+<%--    %>--%>
+<%--    <h1>chua dang nhap</h1>--%>
+<%--    <%--%>
+<%--        else {--%>
+<%--    %>--%>
+<%--    <h1>Xin chao <%= user.getUsername()%> </h1>--%>
+<%--    <%--%>
+<%--        {--%>
+<%--    %>--%>
+<c:if test="${auth == null}">
+    <h1>chua dang nhap</h1>
+</c:if>
+<c:if test="${auth != null}">
+    <h1>Xin chao ${auth.username}</h1>
+</c:if>
+
+<%--    <h1>Xin chao <%= (user == null) ? "chua dang nhap" : user.getUsername()%> ></h1>--%>
+    <a class="sign-up"  href="<c:url value="/logout"/>">Logout</a>
 </body>
 </html>
