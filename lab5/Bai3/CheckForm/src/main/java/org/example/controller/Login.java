@@ -1,4 +1,7 @@
-package org.example;
+package org.example.controller;
+
+import org.example.model.User;
+import org.example.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,17 +23,17 @@ public class Login extends HttpServlet {
         String username = request.getParameter("username").trim();
         String password = request.getParameter("password");
 
-        boolean isError = false;
-        if(username.length() < 5) {
-            isError = true;
-            request.setAttribute("errorUsername", "Username must be least 5 character");
-        }
-        if(password.isEmpty()) {
-            isError = true;
-            request.setAttribute("errorPass", "Password is required");
-        }
-        if (isError)
-            getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+//        boolean isError = false;
+//        if(username.length() < 5) {
+//            isError = true;
+//            request.setAttribute("errorUsername", "Username must be least 5 character");
+//        }
+//        if(password.isEmpty()) {
+//            isError = true;
+//            request.setAttribute("errorPass", "Password is required");
+//        }
+//        if (isError)
+//            getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
         User user = service.login(username, password);
         if(user != null) {
             request.getSession().setAttribute("auth", user);

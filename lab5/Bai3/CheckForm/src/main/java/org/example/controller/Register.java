@@ -1,4 +1,6 @@
-package org.example;
+package org.example.controller;
+
+import org.example.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
